@@ -1,0 +1,149 @@
+version: 2
+
+sources:
+  - name: raw_customers
+    description: This file contains all information on customers
+    project: retailxpressdatawarehouse  # Ensure the correct case is used
+    dataset: data_lake
+    tables:
+      - name: customers
+        columns:
+          - name: customer_id
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables
+          - name: name
+            tests:
+              - not_null
+              - assert_empty_or_small_values
+          - name: email
+            tests:
+              - not_null
+              - unique
+              - assert_empty_or_small_values
+          - name: join_date
+            tests:
+              - not_null
+          - name: phone
+            tests:
+              - not_null
+              - unique
+              - assert_empty_or_small_values   
+              - assert_large_values
+          - name: loyalty_points
+            tests:
+              - not_null
+
+
+  - name: raw_products
+    description: This file contains all information on products
+    database: retailxpressdatawarehouse  # Ensure the correct case is used
+    schema: data_lake
+    tables:
+      - name: products
+        columns:
+          - name: product_id
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables
+          - name: category
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['Electronics', 'Clothing', 'Groceries', 'Furniture']
+              - assert_empty_or_small_values   
+              - assert_large_values
+          - name: price
+            tests:
+              - not_null
+              - assert_value_less_than_or_equal_to_0
+          - name: stock_level
+            tests:
+              - not_null
+              - assert_value_less_than_or_equal_to_0
+
+
+  - name: raw_stores
+    description: This file contains all information on stores
+    database: retailxpressdatawarehouse  # Ensure the correct case is used
+    schema: data_lake
+    tables:
+      - name: stores
+        columns:
+          - name: string_field_0
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables
+          - name: string_field_1
+            tests:
+              - not_null
+              - unique
+
+  - name: raw_suppliers
+    description: This file contains all information on suppliers
+    database: retailxpressdatawarehouse  # Ensure the correct case is used
+    schema: data_lake
+    tables:
+      - name: suppliers
+        columns:
+          - name: string_field_0
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables
+          - name: string_field_2
+            tests:
+              - not_null
+              - unique    
+              - assert_empty_or_small_values   
+              - assert_large_values        
+
+
+  - name: raw_product_metadata
+    description: This file contains all metadata on products
+    database: retailxpressdatawarehouse  # Ensure the correct case is used
+    schema: data_lake
+    tables:
+      - name: product_metadata
+        columns:
+          - name: string_field_0
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables           
+
+
+
+  - name: raw_marketing_campaigns
+    description: This file contains all information on marketing_campaigns
+    database: retailxpressdatawarehouse  # Ensure the correct case is used
+    schema: data_lake
+    tables:
+      - name: marketing_campaigns
+        columns:
+          - name: campaign_id
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables     
+          - name: performance_metrics
+            tests:
+              - not_null
+
+
+  - name: raw_customer_preferences
+    description: This file contains all information on customer_preferences
+    database: retailxpressdatawarehouse  # Ensure the correct case is used
+    schema: data_lake
+    tables:
+      - name: customer_preferences
+        columns:
+          - name: string_field_0
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables     
+       

@@ -1,0 +1,11 @@
+
+retailXpress_warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: retailxpressdatawarehouse
+      dataset: data_lake # You can also use "schema" here
+      threads: 5 # Must be a value of 1 or greater 
+      location: EU

@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.1">
+  <diagram name="Page-1" id="umbAMwPUh9g5Ha6uREeG">
+    <mxGraphModel dx="1050" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="X2ctDmvNdXPeSvfD6I9b-1" target="X2ctDmvNdXPeSvfD6I9b-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-1" value="Data sources&lt;div&gt;OLTP tables in bigquery data lake&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="20" y="265" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-2" value="MongoDB json documents converted to tables" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="10" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.4;entryY=-0.019;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="X2ctDmvNdXPeSvfD6I9b-2" target="X2ctDmvNdXPeSvfD6I9b-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="165" />
+              <mxPoint x="78" y="165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-5" value="Data Warehouse" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="220" y="190" width="560" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-6" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="260" y="260" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-7" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="220" y="225" width="560" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="X2ctDmvNdXPeSvfD6I9b-8" target="X2ctDmvNdXPeSvfD6I9b-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-8" value="Staging Layer" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="250" y="270" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-9" value="Looker" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="870" y="280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="X2ctDmvNdXPeSvfD6I9b-10" target="X2ctDmvNdXPeSvfD6I9b-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-10" value="Warehouse layer&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Data Marts(facts and dims)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="425" y="260" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-11" value="OBT layer" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="650" y="270" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X2ctDmvNdXPeSvfD6I9b-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.03;entryY=0.363;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="X2ctDmvNdXPeSvfD6I9b-11" target="X2ctDmvNdXPeSvfD6I9b-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
