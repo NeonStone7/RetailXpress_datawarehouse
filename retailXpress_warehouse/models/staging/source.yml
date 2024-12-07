@@ -147,3 +147,50 @@ sources:
               - unique
               # - relationship to other tables     
        
+
+  - name: raw_inventory_movements
+    description: This file contains all information on inventory_movements
+    database: retailxpressdatawarehouse  # Ensure the correct case is used
+    schema: data_lake
+    tables:
+      - name: inventory_movements
+        columns:
+          - name: movement_id
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables     
+          - name: product_id
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables     
+          - name: store_id
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables     
+                    
+
+  - name: raw_supply_chain_deliveries
+    description: This file contains all information on supply_chain_deliveries
+    database: retailxpressdatawarehouse  # Ensure the correct case is used
+    schema: data_lake
+    tables:
+      - name: supply_chain_deliveries
+        columns:
+          - name: delivery_id
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables     
+          - name: supplier_id
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables     
+          - name: product_id
+            tests:
+              - not_null
+              - unique
+              # - relationship to other tables                         

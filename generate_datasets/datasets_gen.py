@@ -205,14 +205,16 @@ customer_preferences = generate_customer_preferences(customers)
 with open(f'{main_path}/customer_preferences.json', 'w') as f:
     json.dump(customer_preferences, f)
 
-transactions = generate_sales_transactions(5000000, customers, products, stores)  # 5 million sales transactions
-transactions.to_csv(f'{main_path}/sales_transactions.csv', index=False)
-
 inventory_movements = generate_inventory_movements(1000000, products, stores)  # 1 million inventory movements
 inventory_movements.to_csv(f'{main_path}/inventory_movements.csv', index=False)
 
 deliveries = generate_supply_chain_deliveries(1000000, suppliers, products)  # 1 million deliveries
 deliveries.to_csv(f'{main_path}/supply_chain_deliveries.csv', index=False)
+
+transactions = generate_sales_transactions(5000000, customers, products, stores)  # 5 million sales transactions
+transactions.to_csv(f'{main_path}/sales_transactions.csv', index=False)
+
+
 
 # Document DB Data
 

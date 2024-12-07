@@ -1,3 +1,4 @@
+"""Load csv files into bigquery"""
 from google.cloud import bigquery
 from google.oauth2 import service_account
 import os
@@ -8,12 +9,16 @@ client = bigquery.Client()
 
 main_path = "/Users/Oamen/OneDrive/Documents/DATA PROJECTS/RetailXpress_data_warehouse/datasets"
 
-csv_files = [(f'{main_path}/{file}', file) for file in os.listdir(main_path) if file.endswith('csv')]
+json_files = [file.split('.')[0] for file in os.listdir(main_path) if file.endswith('json')]
+csv_files = [(f'{main_path}/{file}', file) for file in os.listdir(main_path) if file.endswith('csv') and file.split('.')[0] not in json_files]
+# print(f'All csv: {csv_files}')
+# print(json_files)
 
 dataset_id = 'data_lake'
 dataset_ref = client.dataset(dataset_id)
 
 for filename, tablename in csv_files:
+    print(filename)
     
     table_id = tablename.split('.')[0]
 

@@ -39,7 +39,7 @@ models:
       schema: stg_warehouse
       location: EU
     warehouse:
-      +materialized: table
+      +materialized: view
       enabled: true
       schema: mart_warehouse
     obt:
